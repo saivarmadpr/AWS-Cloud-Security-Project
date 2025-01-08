@@ -11,7 +11,7 @@ This project demonstrates a secure VPC setup with public and private subnets, fo
 - Set up route tables with an Internet Gateway (IGW) and NAT Gateway.
 
 ## Architecture Diagram
-![VPC Diagram](link-to-diagram)
+![VPC Diagram](https://github.com/saivarmadpr/AWS-Cloud-Security-Project/blob/da2a012f44ccad2a4f123416aa2eb1063540c45f/Diagrams/AWS_Infrastructure.drawio.png)
 
 ## Steps
 ### 1. Create a VPC
