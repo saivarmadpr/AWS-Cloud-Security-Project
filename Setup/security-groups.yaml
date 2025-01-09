@@ -1,0 +1,22 @@
+SecurityGroups:
+  - Name: Public-Security-Group
+    InboundRules:
+      - Port: 22
+        Protocol: TCP
+        Source: 0.0.0.0/0
+      - Port: 80
+        Protocol: TCP
+        Source: 0.0.0.0/0
+    OutboundRules:
+      - Port: All
+        Protocol: All
+        Destination: 0.0.0.0/0
+  - Name: Private-Security-Group
+    InboundRules:
+      - Port: 3306
+        Protocol: TCP
+        Source: Public-Security-Group
+    OutboundRules:
+      - Port: All
+        Protocol: All
+        Destination: 0.0.0.0/0

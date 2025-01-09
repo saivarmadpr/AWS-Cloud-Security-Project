@@ -1,0 +1,25 @@
+NACLs:
+  PublicSubnetNACL:
+    InboundRules:
+      - RuleNumber: 100
+        Protocol: TCP
+        Port: 80
+        Action: ALLOW
+        Source: 0.0.0.0/0
+    OutboundRules:
+      - RuleNumber: 100
+        Protocol: All
+        Action: ALLOW
+        Destination: 0.0.0.0/0
+  PrivateSubnetNACL:
+    InboundRules:
+      - RuleNumber: 100
+        Protocol: TCP
+        Port: 3306
+        Action: ALLOW
+        Source: 10.0.1.0/24
+    OutboundRules:
+      - RuleNumber: 100
+        Protocol: All
+        Action: ALLOW
+        Destination: 0.0.0.0/0
